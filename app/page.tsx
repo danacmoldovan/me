@@ -15,11 +15,8 @@ export default function PortfolioPage() {
 
       <main className="mx-auto max-w-6xl px-4 pt-24 pb-16">
         {/* Hero Section */}
-        <section className="mb-16">
+        <section id="hero" className="mb-16 scroll-mt-20">
           <div className="max-w-3xl">
-            <p className="mb-4 font-mono text-sm text-muted-foreground">
-              {hero.eyebrow}
-            </p>
             <h1 className="mb-6 text-4xl font-medium leading-tight text-foreground md:text-5xl lg:text-6xl text-balance">
               {hero.titleLine1}
               <br />
@@ -32,7 +29,7 @@ export default function PortfolioPage() {
         </section>
 
         {/* Mini Stats */}
-        <section className="mb-16">
+        <section id="stats" className="mb-16 scroll-mt-20">
           <div className="grid gap-4 grid-cols-1 sm:grid-cols-3">
             {stats.map((stat) => (
               <BentoCard key={stat.title} className="flex flex-col justify-between">
@@ -48,12 +45,12 @@ export default function PortfolioPage() {
         </section>
 
         {/* Chaos to Clarity */}
-        <section className="mb-16">
+        <section id="chaosToClarity" className="mb-16 scroll-mt-20">
           <ChaosToClarityCard />
         </section>
 
         {/* AI Workflow */}
-        <section id="thinking" className="mb-16 scroll-mt-20">
+        <section id="aiWorkflow" className="mb-16 scroll-mt-20">
           <AIWorkflowSection />
         </section>
 
@@ -68,11 +65,13 @@ export default function PortfolioPage() {
         </section>
 
         {/* Contact */}
-        <ContactSection />
+        <section id="contact" className="scroll-mt-20">
+          <ContactSection />
+        </section>
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-border">
+      <footer id="footer" className="border-t border-border">
         <div className="mx-auto max-w-6xl px-4 py-8 text-center text-sm text-muted-foreground">
           <p>{footer.text}</p>
         </div>

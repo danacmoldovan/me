@@ -22,17 +22,17 @@ export const content = {
   // -- Top navigation -------------------------------------------------------
   // The "href" must point to a section that exists on the page (matching id).
   header: {
-    logoInitials: "PD",
-    logoText: "Product Designer",
+    logoInitials: "DM",
+    logoText: "Dana Moldovan",
+    logoSubtext: "Product Designer",
     nav: [
-      { label: "Thinking", href: "#thinking" },
-      { label: "Connect", href: "#connect" },
+      { label: "Thinking", href: "#aiWorkflow" },
+      { label: "Connect", href: "#contact" },
     ],
   },
 
   // -- Hero (top of the page) ----------------------------------------------
   hero: {
-    eyebrow: "Product Designer",
     titleLine1: "Dana's space",
     titleLine2: "Thoughts in structure",
     description:
@@ -223,9 +223,7 @@ export const content = {
     description:
       "I'm particularly interested in startups and scale-ups where design thinking can shape product direction, not just execute on it.",
     links: [
-      { label: "LinkedIn", href: "#", icon: "in" },
-      { label: "Twitter", href: "#", icon: "X" },
-      { label: "Email", href: "mailto:hello@example.com", icon: "@" },
+      { label: "LinkedIn", href: "https://www.linkedin.com/in/dana-moldovan", icon: "in" }
     ],
   },
 

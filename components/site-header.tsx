@@ -5,19 +5,22 @@ import Link from "next/link"
 import { cn } from "@/lib/utils"
 import { content } from "@/content"
 
-const { logoInitials, logoText, nav } = content.header
+const { logoInitials, logoText, logoSubtext, nav } = content.header
 
 export function SiteHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
+    <header id="header" className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/" id="brand" className="flex items-center gap-2">
           <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">
             <span className="font-mono text-sm font-bold">{logoInitials}</span>
           </div>
-          <span className="hidden font-medium sm:block">{logoText}</span>
+          <span className="hidden flex-col leading-tight sm:flex">
+            <span className="font-medium">{logoText}</span>
+            <span className="font-mono text-xs text-muted-foreground">{logoSubtext}</span>
+          </span>
         </Link>
 
         {/* Desktop nav */}

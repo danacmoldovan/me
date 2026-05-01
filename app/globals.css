@@ -1,14 +1,14 @@
 @import 'tailwindcss';
 
 :root {
-  --background: oklch(0.98 0.005 75);
+  --background: oklch(0.98 0.005 75); /* mirrored as #faf8f5 in public/icon.svg */
   --foreground: oklch(0.15 0.02 45);
   --card: oklch(1 0 0);
   --primary: oklch(0.15 0.02 45);
   --primary-foreground: oklch(0.98 0.005 75);
   --muted: oklch(0.93 0.01 75);
   --muted-foreground: oklch(0.45 0.02 45);
-  --accent: oklch(0.55 0.15 145);
+  --accent: oklch(0.55 0.15 145); /* mirrored as #278733 in public/icon.svg */
   --accent-foreground: oklch(0.98 0.005 75);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.88 0.02 75);
