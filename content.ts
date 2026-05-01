@@ -14,7 +14,7 @@
 export const content = {
   // -- Browser tab + search engine preview ----------------------------------
   meta: {
-    title: "Product Designer | Thinking Systems Over Case Studies",
+    title: "Dana Moldovan | Product Designer | Thinking Systems Over Case Studies",
     description:
       "A product designer who creates structure from chaos. Explore how I think, not just what I make.",
   },
