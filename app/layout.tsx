@@ -1,22 +1,21 @@
 import type { Metadata } from 'next'
 import { DM_Sans, Space_Mono } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
+import { content } from '@/content'
 import './globals.css'
 
-const dmSans = DM_Sans({ 
+const dmSans = DM_Sans({
   subsets: ["latin"],
   variable: '--font-sans'
 });
-const spaceMono = Space_Mono({ 
+const spaceMono = Space_Mono({
   subsets: ["latin"],
   weight: ['400', '700'],
   variable: '--font-mono'
 });
 
 export const metadata: Metadata = {
-  title: 'Product Designer | Thinking Systems Over Case Studies',
-  description: 'A product designer who creates structure from chaos. Explore how I think, not just what I make.',
-  generator: 'v0.app',
+  title: content.meta.title,
+  description: content.meta.description,
   icons: {
     icon: [
       {
@@ -45,7 +44,6 @@ export default function RootLayout({
     <html lang="en" className={`${dmSans.variable} ${spaceMono.variable}`}>
       <body className="font-sans antialiased">
         {children}
-        <Analytics />
       </body>
     </html>
   )

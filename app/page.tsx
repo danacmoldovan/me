@@ -4,9 +4,11 @@ import { ChaosToClarityCard } from "@/components/chaos-to-clarity-card"
 import { AIWorkflowSection } from "@/components/ai-workflow-section"
 import { DesignGuessingGame } from "@/components/design-guessing-game"
 import { ContactSection } from "@/components/contact-section"
-
+import { content } from "@/content"
 
 export default function PortfolioPage() {
+  const { hero, stats, game, footer } = content
+
   return (
     <div className="min-h-screen bg-background">
       <SiteHeader />
@@ -16,43 +18,41 @@ export default function PortfolioPage() {
         <section className="mb-16">
           <div className="max-w-3xl">
             <p className="mb-4 font-mono text-sm text-muted-foreground">
-              Product Designer
+              {hero.eyebrow}
             </p>
             <h1 className="mb-6 text-4xl font-medium leading-tight text-foreground md:text-5xl lg:text-6xl text-balance">
-              Dana's space
+              {hero.titleLine1}
               <br />
-              <span className="text-accent">Thoughts in structure</span>
+              <span className="text-accent">{hero.titleLine2}</span>
             </h1>
             <p className="max-w-xl text-lg text-muted-foreground">
-              A product designer navigating complexity, using systems thinking and AI to explore, validate and shape product direction.
+              {hero.description}
             </p>
           </div>
         </section>
 
-        {/* Mini Stats - Moved to top */}
+        {/* Mini Stats */}
         <section className="mb-16">
           <div className="grid gap-4 grid-cols-1 sm:grid-cols-3">
-            <BentoCard className="flex flex-col justify-between">
-              <p className="font-mono text-2xl font-bold text-foreground sm:text-3xl">SaaS</p>
-              <p className="mt-2 text-sm text-muted-foreground">Data-heavy platforms</p>
-            </BentoCard>
-            <BentoCard className="flex flex-col justify-between">
-              <p className="font-mono text-2xl font-bold text-foreground sm:text-3xl">Agentic AI</p>
-              <p className="mt-2 text-sm text-muted-foreground">Trustworthy AI interactions</p>
-            </BentoCard>
-            <BentoCard className="flex flex-col justify-between">
-              <p className="font-mono text-2xl font-bold text-foreground sm:text-3xl">PLG mindset</p>
-              <p className="mt-2 text-sm text-muted-foreground">Growth through product experience</p>
-            </BentoCard>
+            {stats.map((stat) => (
+              <BentoCard key={stat.title} className="flex flex-col justify-between">
+                <p className="font-mono text-2xl font-bold text-foreground sm:text-3xl">
+                  {stat.title}
+                </p>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  {stat.description}
+                </p>
+              </BentoCard>
+            ))}
           </div>
         </section>
 
-        {/* Chaos to Clarity - Full Width */}
+        {/* Chaos to Clarity */}
         <section className="mb-16">
           <ChaosToClarityCard />
         </section>
 
-        {/* AI Workflow Section */}
+        {/* AI Workflow */}
         <section id="thinking" className="mb-16 scroll-mt-20">
           <AIWorkflowSection />
         </section>
@@ -61,7 +61,7 @@ export default function PortfolioPage() {
         <section id="game" className="mb-16 scroll-mt-20">
           <div className="mb-8">
             <h2 className="font-mono text-sm uppercase tracking-wider text-muted-foreground">
-              Test Your Design Judgment
+              {game.sectionEyebrow}
             </h2>
           </div>
           <DesignGuessingGame />
@@ -73,9 +73,8 @@ export default function PortfolioPage() {
 
       {/* Footer */}
       <footer className="border-t border-border">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 py-8 text-sm text-muted-foreground sm:flex-row">
-          <p>Designed with intention. Built in the open.</p>
-          <p className="font-mono text-xs">© 2026</p>
+        <div className="mx-auto max-w-6xl px-4 py-8 text-center text-sm text-muted-foreground">
+          <p>{footer.text}</p>
         </div>
       </footer>
     </div>

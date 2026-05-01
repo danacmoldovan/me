@@ -3,49 +3,9 @@
 import { useState } from "react"
 import { BentoCard } from "./bento-card"
 import { cn } from "@/lib/utils"
+import { content } from "@/content"
 
-const chaosItems = [
-  // Strategy & Vision
-  "no product vision",
-  "undefined metrics",
-  "vague requirements",
-  "conflicting goals",
-  // Ownership & Process
-  "unclear ownership",
-  "random decisions",
-  "no prioritization",
-  "reactive work",
-  // Stakeholders & Communication
-  "stakeholder noise",
-  "design by opinion",
-  "overpromising",
-  "last-minute changes",
-  // UX & Execution
-  "inconsistent UX",
-  "feature dumping",
-  "fragmented flows",
-  "copy chaos",
-  "firefighting",
-]
-
-const clarityCategories = [
-  {
-    name: "Strategy & Vision",
-    items: ["direction starts to exist", "success gets defined", "requirements become explicit", "goals get aligned"],
-  },
-  {
-    name: "Ownership & Process",
-    items: ["ownership becomes clear enough", "decisions have a driver", "priorities become visible", "we plan ahead"],
-  },
-  {
-    name: "Communication",
-    items: ["stakeholders align", "decisions are explained", "expectations get managed", "changes follow a process"],
-  },
-  {
-    name: "UX & Execution",
-    items: ["patterns start to repeat", "features follow a direction", "flows connect end-to-end", "content becomes intentional", "less firefighting, more focus"],
-  },
-]
+const { eyebrow, footerNote, chaosItems, clarityCategories } = content.chaosToClarity
 
 export function ChaosToClarityCard() {
   const [isOrganized, setIsOrganized] = useState(false)
@@ -55,7 +15,7 @@ export function ChaosToClarityCard() {
       <div className="flex h-full flex-col">
         <div className="mb-6 flex items-center justify-between">
           <span className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
-            Creating Structure from Chaos
+            {eyebrow}
           </span>
           <button
             onClick={() => setIsOrganized(!isOrganized)}
@@ -97,7 +57,7 @@ export function ChaosToClarityCard() {
             <div className="flex flex-wrap gap-x-4 gap-y-5 p-4">
               {chaosItems.map((item, i) => (
                 <div
-                  key={item}
+                  key={i}
                   className="flex h-9 items-center rounded-lg border border-destructive/30 bg-destructive/5 px-3 text-sm text-foreground"
                   style={{
                     transform: `rotate(${((i * 17 + 5) % 25) - 12}deg)`,
@@ -127,7 +87,7 @@ export function ChaosToClarityCard() {
                   <div className="flex flex-col gap-1.5">
                     {category.items.map((item, i) => (
                       <div
-                        key={item}
+                        key={i}
                         className="rounded-lg border border-accent/30 bg-accent/5 px-3 py-2 text-sm transition-all"
                         style={{
                           transitionDelay: `${(catIndex * 4 + i) * 50}ms`,
@@ -144,9 +104,7 @@ export function ChaosToClarityCard() {
         </div>
 
         <div className="mt-4">
-          <p className="text-xs text-muted-foreground">
-            Evolving products need frameworks, not just features.
-          </p>
+          <p className="text-xs text-muted-foreground">{footerNote}</p>
         </div>
       </div>
     </BentoCard>
