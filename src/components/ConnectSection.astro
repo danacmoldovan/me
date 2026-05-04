@@ -1,0 +1,48 @@
+---
+import { content } from "../content"
+const { connect } = content
+---
+
+<section id="connect" class="scroll-mt-20 py-16">
+  <p
+    class="mb-2 font-mono text-sm tracking-wider text-muted-foreground uppercase"
+  >
+    {connect.eyebrow}
+  </p>
+  <h2
+    class="mb-4 max-w-3xl text-3xl font-medium text-foreground md:text-4xl"
+  >
+    {connect.title}
+  </h2>
+  <p class="mb-8 max-w-2xl text-base text-muted-foreground">
+    {connect.description}
+  </p>
+
+  <ul class="flex flex-wrap gap-3">
+    {
+      connect.links.map((link) => (
+        <li>
+          <a
+            href={link.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 rounded-full bg-foreground px-5 py-2.5 text-sm font-medium text-background transition-opacity hover:opacity-90"
+          >
+            {link.icon === "in" && (
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+              </svg>
+            )}
+            {link.label}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</section>

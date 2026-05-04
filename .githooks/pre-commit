@@ -1,18 +1,14 @@
 #!/bin/sh
 set -e
 
-files=$(git diff --cached --name-only --diff-filter=ACMR | grep -E '\.(ts|tsx|js|jsx|mjs|cjs)$' || true)
+files=$(git diff --cached --name-only --diff-filter=ACMR | grep -E '\.(astro|ts|tsx|js|jsx|mjs|cjs|css)$' || true)
 
 if [ -z "$files" ]; then
-  echo "no JS/TS changes; skipping lint and typecheck"
+  echo "no source changes; skipping check"
   exit 0
 fi
 
-echo "→ lint (staged files)"
-echo "$files" | xargs npx --no-install eslint
-
-# typecheck runs project-wide because TypeScript is project-wide:
-# a change in one file can break types elsewhere. Incremental cache
-# (tsconfig.json: "incremental": true) keeps repeat runs fast.
-echo "→ typecheck"
-npm run typecheck --silent
+# astro check covers .astro + .ts type-checking project-wide.
+# Project-wide because a change in one file can break types elsewhere.
+echo "→ astro check"
+npm run check

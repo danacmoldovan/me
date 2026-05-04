@@ -1,0 +1,103 @@
+---
+import { content } from "../content"
+const { play } = content
+
+const answers = play.questions.map((q) => q.correctAnswer)
+---
+
+<section id="play" class="scroll-mt-20 py-16">
+  <p
+    class="mb-2 font-mono text-sm tracking-wider text-muted-foreground uppercase"
+  >
+    {play.eyebrow}
+  </p>
+  <h2 class="mb-10 text-3xl font-medium text-foreground md:text-4xl">
+    {play.title}
+  </h2>
+
+  <div class="grid gap-8" data-play-game>
+    {
+      play.questions.map((q, idx) => (
+        <div
+          class="rounded-2xl border border-border bg-muted/40 p-6"
+          data-question
+          data-index={idx}
+        >
+          <p class="mb-6 text-lg font-medium text-foreground">
+            <span class="mr-2 text-muted-foreground">{idx + 1}.</span>
+            {q.question}
+          </p>
+
+          <div class="grid gap-3 sm:grid-cols-2">
+            <button
+              type="button"
+              class="group rounded-xl border border-border bg-background p-4 text-left transition-colors hover:border-foreground data-[state=correct]:border-accent data-[state=correct]:bg-accent/10 data-[state=wrong]:border-red-400 data-[state=wrong]:bg-red-50"
+              data-option="A"
+            >
+              <span class="block text-sm font-semibold text-foreground">
+                A · {q.optionA.label}
+              </span>
+              <span class="mt-1 block text-sm text-muted-foreground">
+                {q.optionA.description}
+              </span>
+            </button>
+            <button
+              type="button"
+              class="group rounded-xl border border-border bg-background p-4 text-left transition-colors hover:border-foreground data-[state=correct]:border-accent data-[state=correct]:bg-accent/10 data-[state=wrong]:border-red-400 data-[state=wrong]:bg-red-50"
+              data-option="B"
+            >
+              <span class="block text-sm font-semibold text-foreground">
+                B · {q.optionB.label}
+              </span>
+              <span class="mt-1 block text-sm text-muted-foreground">
+                {q.optionB.description}
+              </span>
+            </button>
+          </div>
+
+          <p
+            class="mt-4 hidden text-sm text-foreground/80"
+            data-explanation
+            data-text={q.explanation}
+            aria-live="polite"
+          />
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<script is:inline define:vars={{ answers }}>
+  const game = document.querySelector("[data-play-game]")
+  if (game) {
+    game.addEventListener("click", (event) => {
+      const option = event.target.closest("[data-option]")
+      if (!option) return
+
+      const question = option.closest("[data-question]")
+      if (!question || question.dataset.answered) return
+
+      question.dataset.answered = "true"
+
+      const idx = Number(question.dataset.index)
+      const correct = answers[idx]
+      const explanation = question.querySelector("[data-explanation]")
+
+      question.querySelectorAll("[data-option]").forEach((btn) => {
+        if (btn.dataset.option === correct) {
+          btn.dataset.state = "correct"
+        } else if (btn === option) {
+          btn.dataset.state = "wrong"
+        }
+        btn.disabled = true
+      })
+
+      if (explanation) {
+        explanation.classList.remove("hidden")
+        // Inject text after unhiding so the live region (which started empty)
+        // sees a content change and announces to screen readers.
+        explanation.textContent = explanation.dataset.text ?? ""
+      }
+    })
+  }
+</script>

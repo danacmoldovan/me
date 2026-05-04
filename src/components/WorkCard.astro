@@ -1,0 +1,39 @@
+---
+interface Props {
+  title: string
+  category: string
+  description: string
+  image: string
+}
+
+const { title, category, description, image } = Astro.props
+---
+
+<article class="flex flex-col" data-work-card data-category={category}>
+  <div
+    class="mb-4 flex aspect-[4/3] items-center justify-center overflow-hidden rounded-2xl bg-muted"
+  >
+    {
+      image ? (
+        <img
+          src={image}
+          alt={title}
+          class="h-full w-full object-cover"
+          loading="lazy"
+        />
+      ) : (
+        <span class="px-6 text-center text-base text-foreground/70">
+          {title}
+        </span>
+      )
+    }
+  </div>
+
+  <p
+    class="mb-2 text-xs font-semibold tracking-wider text-accent uppercase"
+  >
+    {category}
+  </p>
+  <h3 class="mb-2 text-xl font-medium text-foreground">{title}</h3>
+  <p class="text-sm text-muted-foreground">{description}</p>
+</article>

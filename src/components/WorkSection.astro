@@ -1,0 +1,90 @@
+---
+import { content } from "../content"
+import WorkCard from "./WorkCard.astro"
+
+const { work } = content
+const pills = ["all", ...work.categories]
+---
+
+<section id="work" class="scroll-mt-20 py-16">
+  <h2
+    class="mb-6 font-mono text-sm font-normal tracking-wider text-muted-foreground uppercase"
+  >
+    {work.eyebrow}
+  </h2>
+
+  <div
+    class="mb-10 flex flex-wrap gap-3"
+    role="group"
+    aria-label="Filter projects by category"
+    data-work-pills
+  >
+    {
+      pills.map((pill) => (
+        <button
+          type="button"
+          class="rounded-full border border-border bg-muted px-5 py-2 text-sm text-foreground transition-colors data-[active=true]:border-foreground data-[active=true]:bg-foreground data-[active=true]:text-background"
+          data-pill={pill}
+          data-active={pill === "all" ? "true" : "false"}
+          aria-pressed={pill === "all" ? "true" : "false"}
+        >
+          {pill === "all" ? "All work" : pill}
+        </button>
+      ))
+    }
+  </div>
+
+  <p class="sr-only" aria-live="polite" data-work-status></p>
+
+  <div
+    class="grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3"
+    data-work-grid
+    data-filter="all"
+  >
+    {
+      work.items.map((item) => (
+        <WorkCard
+          title={item.title}
+          category={item.category}
+          description={item.description}
+          image={item.image}
+        />
+      ))
+    }
+  </div>
+</section>
+
+<script>
+  const pillsRoot = document.querySelector<HTMLElement>("[data-work-pills]")
+  const grid = document.querySelector<HTMLElement>("[data-work-grid]")
+  const status = document.querySelector<HTMLElement>("[data-work-status]")
+
+  if (pillsRoot && grid) {
+    pillsRoot.addEventListener("click", (event) => {
+      const target = event.target as HTMLElement
+      const button = target.closest<HTMLElement>("[data-pill]")
+      if (!button) return
+
+      const value = button.dataset.pill ?? "all"
+
+      pillsRoot.querySelectorAll<HTMLElement>("[data-pill]").forEach((b) => {
+        const active = b === button
+        b.dataset.active = active ? "true" : "false"
+        b.setAttribute("aria-pressed", active ? "true" : "false")
+      })
+
+      grid.dataset.filter = value
+      let visible = 0
+      grid.querySelectorAll<HTMLElement>("[data-work-card]").forEach((card) => {
+        const matches = value === "all" || card.dataset.category === value
+        card.style.display = matches ? "" : "none"
+        if (matches) visible++
+      })
+
+      if (status) {
+        const label = value === "all" ? "all work" : value
+        status.textContent = `Showing ${visible} project${visible === 1 ? "" : "s"} in ${label}`
+      }
+    })
+  }
+</script>

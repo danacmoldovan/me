@@ -1,0 +1,43 @@
+---
+import { content } from "../content"
+const { header } = content
+---
+
+<header
+  class="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur"
+>
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
+    <a href="#top" class="flex items-center gap-3">
+      <span
+        class="flex h-9 w-9 items-center justify-center rounded-full bg-foreground text-sm font-bold text-background"
+      >
+        {header.logoInitials}
+      </span>
+      <span class="leading-tight">
+        <span class="block text-sm font-medium text-foreground">
+          {header.logoText}
+        </span>
+        <span class="block text-xs text-muted-foreground">
+          {header.logoSubtext}
+        </span>
+      </span>
+    </a>
+
+    <nav>
+      <ul class="flex gap-6 text-sm">
+        {
+          header.nav.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                class="text-muted-foreground transition-colors hover:text-foreground"
+              >
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</header>
