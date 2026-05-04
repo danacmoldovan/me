@@ -1,0 +1,34 @@
+---
+import "../styles/global.css"
+import { content } from "../content"
+import SiteHeader from "../components/SiteHeader.astro"
+import WorkSection from "../components/WorkSection.astro"
+import PlaySection from "../components/PlaySection.astro"
+import ConnectSection from "../components/ConnectSection.astro"
+import SiteFooter from "../components/SiteFooter.astro"
+
+const { meta } = content
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={meta.description} />
+    <title>{meta.title}</title>
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/icon-32x32.png" />
+    <link rel="apple-touch-icon" href="/apple-icon.png" />
+  </head>
+  <body id="top">
+    <SiteHeader />
+    <main class="mx-auto max-w-6xl px-4 pt-8">
+      <h1 class="sr-only">Dana Moldovan — Product Designer</h1>
+      <WorkSection />
+      <PlaySection />
+      <ConnectSection />
+    </main>
+    <SiteFooter />
+  </body>
+</html>

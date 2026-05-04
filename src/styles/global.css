@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+/* -----------------------------------------------------------------------------
+ * THEME TOKENS
+ * Change colors here and the whole site updates.
+ * --------------------------------------------------------------------------- */
+@theme {
+  --color-background: #f5f1e8;
+  --color-foreground: #1a1a1a;
+  --color-muted: #e8e2d4;
+  --color-muted-foreground: #6b6b6b;
+  --color-accent: #2d7a3e;
+  --color-border: #d9d3c3;
+
+  --font-mono:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Whole page renders in monospace — this is the design.
+   To switch to a sans default, replace var(--font-mono) below
+   with a sans stack (or add a --font-sans token in @theme). */
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-mono);
+  -webkit-font-smoothing: antialiased;
+}

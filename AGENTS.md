@@ -4,32 +4,37 @@ A single-page static portfolio site. Keep things simple, to be easily maintained
 
 ## Stack
 
-- Next.js 16 (static export), React 19, TypeScript
-- Tailwind CSS v4
+- Astro 5 (static output)
+- Tailwind CSS v4 (via `@tailwindcss/vite`)
+- TypeScript
 - npm (no pnpm, no yarn)
+
+No React, no UI libraries. Vanilla `<script>` blocks handle the only interactive bits (work filter, play game).
 
 ## Commands
 
 - `npm run dev` — local dev server
 - `npm run build` — production build (must pass before merging)
-- `npm run lint`
+- `npm run check` — typecheck `.astro` and `.ts` files
 
 ## Where things live
 
-- `content.ts` — **all site copy.** Text changes go here, not in components.
-- `app/` — Next.js routes (`page.tsx`, `layout.tsx`, `globals.css`)
-- `components/` — six components, all directly used by `app/page.tsx`
-- `lib/utils.ts` — the `cn()` helper
-- `public/` — favicons only
+- `src/content.ts` — **all site copy.** Text changes go here, not in components.
+- `src/pages/index.astro` — the only page; composes the sections.
+- `src/components/` — six components (`SiteHeader`, `WorkSection`, `WorkCard`, `PlaySection`, `ConnectSection`, `SiteFooter`).
+- `src/styles/global.css` — Tailwind import + theme tokens. Change colors here.
+- `public/` — favicons; `public/work/` for project images.
 
 ## Conventions
 
-- **Don't add dependencies casually.** The repo was deliberately stripped from 50+ deps to ~14. Justify every new one.
-- **Don't reintroduce shadcn/ui or Radix.** They were removed.
-- **Copy changes → `content.ts`.** Don't hardcode text in JSX.
-- **No unused theme tokens.** `globals.css` only defines what's used.
-- TypeScript errors are not ignored (`ignoreBuildErrors` is off). Fix them.
+- **Don't add dependencies casually.** Justify every new one.
+- **Don't reintroduce React, shadcn/ui, or Radix.** This rebuild deliberately strips them.
+- **Copy changes → `src/content.ts`.** Don't hardcode text in components.
+- **Theme changes → `src/styles/global.css`** (the `@theme` block). Don't hardcode hex values in components — use Tailwind utility classes that reference theme tokens (`bg-background`, `text-accent`, etc.).
+- TypeScript errors must be fixed, not suppressed.
 
 ## Editing flow for the owner
 
-The owner edits `content.ts` Netlify auto-deploys. Keep that file readable: clear keys, comments where helpful, no clever indirection.
+The owner edits `src/content.ts`. Netlify auto-deploys on push. Keep that file readable: clear keys, comments where helpful, no clever indirection.
+
+To add a project image: drop the file into `public/work/`, then set `image: "/work/your-file.png"` on the matching item in `content.ts`. Leaving `image: ""` shows a placeholder card with the title.
