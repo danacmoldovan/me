@@ -1,17 +1,23 @@
 ---
 interface Props {
   title: string
+  slug: string
   category: string
   description: string
   image: string
 }
 
-const { title, category, description, image } = Astro.props
+const { title, slug, category, description, image } = Astro.props
 ---
 
-<article class="flex flex-col" data-work-card data-category={category}>
+<a
+  href={`/work/${slug}`}
+  class="group flex flex-col rounded-2xl outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-4 focus-visible:ring-offset-background"
+  data-work-card
+  data-category={category}
+>
   <div
-    class="mb-4 flex aspect-[4/3] items-center justify-center overflow-hidden rounded-2xl bg-muted"
+    class="mb-4 flex aspect-[4/3] items-center justify-center overflow-hidden rounded-2xl bg-muted transition-transform duration-200 group-hover:-translate-y-0.5"
   >
     {
       image ? (
@@ -34,6 +40,10 @@ const { title, category, description, image } = Astro.props
   >
     {category}
   </p>
-  <h3 class="mb-2 text-xl font-medium text-foreground">{title}</h3>
+  <h3
+    class="mb-2 text-xl font-medium text-foreground transition-colors group-hover:text-accent"
+  >
+    {title}
+  </h3>
   <p class="text-sm text-muted-foreground">{description}</p>
-</article>
+</a>

@@ -41,6 +41,7 @@ const pills = ["all", ...work.categories]
       work.items.map((item) => (
         <WorkCard
           title={item.title}
+          slug={item.slug}
           category={item.category}
           description={item.description}
           image={item.image}
