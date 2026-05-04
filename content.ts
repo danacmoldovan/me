@@ -26,8 +26,10 @@ export const content = {
     logoText: "Dana Moldovan",
     logoSubtext: "Product Designer",
     nav: [
-      { label: "Thinking", href: "#aiWorkflow" },
-      { label: "Connect", href: "#contact" },
+      { label: "About", href: "#about" },
+      { label: "My Work", href: "#myWork" },
+      { label: "Design Thinking", href: "#designThinking" },
+      { label: "Contact", href: "#contact" },
     ],
   },
 
@@ -39,12 +41,20 @@ export const content = {
       "A product designer navigating complexity, using systems thinking and AI to explore, validate and shape product direction.",
   },
 
-  // -- Three stat cards under the hero -------------------------------------
-  stats: [
-    { title: "SaaS", description: "Data-heavy platforms" },
-    { title: "Agentic AI", description: "Trustworthy AI interactions" },
-    { title: "PLG mindset", description: "Growth through product experience" },
-  ],
+  // -- "My Work" section: three cards summarising focus areas --------------
+  myWork: {
+    eyebrow: "My Work",
+    items: [
+      { title: "SaaS", description: "Data-heavy platforms" },
+      { title: "Agentic AI", description: "Trustworthy AI interactions" },
+      { title: "PLG mindset", description: "Growth through product experience" },
+    ],
+  },
+
+  // -- "Design Thinking" section: groups the three blocks below ------------
+  designThinking: {
+    eyebrow: "Design Thinking",
+  },
 
   // -- "Chaos to Clarity" card ---------------------------------------------
   chaosToClarity: {
@@ -160,7 +170,6 @@ export const content = {
   // -- "Design Guessing Game" ----------------------------------------------
   // For each question, "correctAnswer" must be exactly "A" or "B" (capitalised).
   game: {
-    sectionEyebrow: "Test Your Design Judgment",
     eyebrow: "Design Judgment",
     questions: [
       {
