@@ -39,7 +39,7 @@ export const content = {
   //              Set to e.g. "/work/my-project.png" to show an image.
   //              (Drop the image file into public/work/.)
   work: {
-    eyebrow: "Work",
+    title: "Work",
     categories: ["SaaS", "Agentic AI", "PLG mindset"],
     items: [
       {
@@ -90,7 +90,6 @@ export const content = {
   // -- PLAY: Design Judgment game ------------------------------------------
   // For each question, "correctAnswer" must be exactly "A" or "B" (capitalised).
   play: {
-    eyebrow: "Play",
     title: "Design Judgment",
     questions: [
       {
@@ -148,7 +147,6 @@ export const content = {
   // -- CONNECT --------------------------------------------------------------
   // Replace each "href" with the real URL. Email uses "mailto:your@email".
   connect: {
-    eyebrow: "Connect",
     title: "Looking for a designer who brings structure, not just pixels?",
     description:
       "I'm particularly interested in startups and scale-ups where design thinking can shape product direction, not just execute on it.",
