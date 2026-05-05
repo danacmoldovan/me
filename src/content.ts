@@ -48,24 +48,24 @@ export const content = {
   // Anything starting with "[FILLER]" is placeholder copy — replace it.
   work: {
     title: "Work",
-    categories: ["SaaS", "Agentic AI", "PLG mindset"],
+    categories: ["SaaS", "Agentic AI", "Product Led Growth (PLG)"],
     items: [
       {
-        title: "Analytics Dashboard Redesign",
-        slug: "analytics-dashboard-redesign",
+        title: "Page Redesign",
+        slug: "page-redesign",
         category: "SaaS",
         description:
-          "Simplified a complex analytics platform with 50+ data visualizations into an intuitive dashboard that reduced time-to-insight by 40%.",
-        image: "",
+          "Redesigned a complex company page into a more intuitive structure that aims to reduce time-to-insight by 40%.",
+        image: "/work/company_page.png",
         problem: [
-          "[FILLER] Users abandoned the dashboard within 30 seconds, unable to locate the metrics that mattered to them.",
-          "[FILLER] Fifty-plus visualizations competed for attention with no visual hierarchy.",
-          "[FILLER] Power users and casual viewers shared one experience, serving neither well.",
+          "Users were unable to locate the metrics that mattered to them.",
+          "No clear separation between static data and actions, competed for attention with no visual hierarchy.",
+          "Power users and casual viewers shared one experience, serving neither well.",
         ],
         approach: [
-          "[FILLER] Conducted user research to identify the five most critical metrics across personas.",
-          "[FILLER] Designed progressive disclosure patterns so advanced charts stayed one click away.",
-          "[FILLER] Established a layout system that scaled from focused summary to deep exploration.",
+          "Mapped JTBD and the five most critical metrics across the page.",
+          "Designed progressive disclosure patterns to reduce scroll-depth.",
+          "Established a layout system that brings contextual actions in the context to the data they affect.",
         ],
       },
       {
@@ -125,7 +125,7 @@ export const content = {
       {
         title: "Self-Serve Onboarding Flow",
         slug: "self-serve-onboarding",
-        category: "PLG mindset",
+        category: "Product Led Growth (PLG)",
         description:
           "Redesigned onboarding to achieve 60% activation rate within first session, up from 25%.",
         image: "",
@@ -143,7 +143,7 @@ export const content = {
       {
         title: "Viral Collaboration Features",
         slug: "viral-collaboration-features",
-        category: "PLG mindset",
+        category: "Product Led Growth (PLG)",
         description:
           "Designed sharing mechanics that turned users into advocates, driving 35% of new signups.",
         image: "",
@@ -213,7 +213,7 @@ export const content = {
         },
         correctAnswer: "B",
         explanation:
-          "AI trust is built through transparency, not false confidence. Users who understand limitations become collaborators. Hiding uncertainty leads to frustration when AI makes mistakes—and it will.",
+          "AI trust is built through transparency, not false confidence. Users who understand limitations become collaborators. Hiding uncertainty leads to frustration when AI makes mistakes, and it might.",
       },
     ],
   },
