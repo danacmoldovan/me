@@ -41,6 +41,8 @@ export const content = {
   // For "image": leave as "" to show a placeholder card with the title inside.
   //              Set to e.g. "/work/my-project.png" to show an image.
   //              (Drop the image file into public/work/.)
+  //              Use a 4:3 aspect ratio (e.g. 1600×1200 or 1440×1080) — the
+  //              card crops to fit, so other ratios will lose top/bottom edges.
   // "slug" becomes the URL of the project page: /work/<slug>.
   //        Use lowercase letters, numbers, and hyphens only.
   // "problem" and "approach" are short bullet lists shown on the project page.
