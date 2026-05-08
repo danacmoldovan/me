@@ -2,6 +2,7 @@
 import "../styles/global.css"
 import { content } from "../content"
 import SiteHeader from "../components/SiteHeader.astro"
+import AboutSection from "../components/AboutSection.astro"
 import WorkSection from "../components/WorkSection.astro"
 import PlaySection from "../components/PlaySection.astro"
 import ConnectSection from "../components/ConnectSection.astro"
@@ -25,6 +26,7 @@ const { meta } = content
     <SiteHeader />
     <main class="mx-auto max-w-6xl px-4 pt-8">
       <h1 class="sr-only">Dana Moldovan — Product Designer</h1>
+      <AboutSection />
       <WorkSection />
       <PlaySection />
       <ConnectSection />

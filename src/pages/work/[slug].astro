@@ -67,12 +67,12 @@ const pageTitle = `${item.title} — ${meta.title}`
 
       <article>
         <header class="mb-8">
-          <span
+          <span id="item-category"
             class="mb-8 inline-block rounded-full bg-accent/15 px-3 py-1 text-xs font-semibold tracking-wider text-accent"
           >
             {item.category}
           </span>
-          <h1
+          <h1 id="item-title"
             class="mb-2 text-3xl font-medium text-foreground sm:text-4xl md:text-5xl"
           >
             {item.title}
@@ -82,7 +82,7 @@ const pageTitle = `${item.title} — ${meta.title}`
           </p>
         </header>
 
-        <div
+        <div id="item-image"
           class="mb-10 flex aspect-[4/3] items-center justify-center overflow-hidden rounded-2xl bg-muted"
         >
           {
@@ -100,11 +100,11 @@ const pageTitle = `${item.title} — ${meta.title}`
           }
         </div>
 
-        <p class="mb-12 max-w-3xl text-base text-foreground/80 sm:text-lg">
+        <p id="item-description" class="mb-12 text-base text-foreground/80 sm:text-lg">
           {item.description}
         </p>
 
-        <section class="mb-12">
+        <section id="item-problem" class="mb-12">
           <h2
             class="mb-4 text-xs font-semibold tracking-wider text-muted-foreground uppercase"
           >
@@ -124,7 +124,7 @@ const pageTitle = `${item.title} — ${meta.title}`
           </ol>
         </section>
 
-        <section>
+        <section id="item-approach">
           <h2
             class="mb-4 text-xs font-semibold tracking-wider text-muted-foreground uppercase"
           >

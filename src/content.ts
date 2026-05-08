@@ -32,6 +32,12 @@ export const content = {
     ],
   },
 
+  // -- ABOUT ----------------------------------------------------------------
+  // The tagline shown at the top of the page.
+  about: {
+    title: "5+y designing products | English and German | based in Romania",
+  },
+
   // -- WORK -----------------------------------------------------------------
   // The "All work" pill is added automatically.
   // Each item's "category" must match one of the names in "categories".
@@ -50,8 +56,7 @@ export const content = {
   // Anything starting with "[FILLER]" is placeholder copy — replace it.
   work: {
     title: "Work",
-    overview: "5+y designing products | English and German | based in Romania",
-    categories: ["SaaS", "Agentic AI", "Product Led Growth (PLG)"],
+    categories: ["SaaS", "Agentic AI", "Product-Led Growth (PLG)"],
     items: [
       {
         title: "Page Redesign",

@@ -1,0 +1,15 @@
+---
+import { content } from "../content"
+const { about } = content
+---
+
+<section
+  id="about"
+  aria-labelledby="about-heading"
+  class="scroll-mt-20 py-16"
+>
+  <h2 id="about-heading" class="sr-only">About</h2>
+  <p class="text-3xl font-medium text-foreground md:text-4xl">
+    {about.title}
+  </p>
+</section>
