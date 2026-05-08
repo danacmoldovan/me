@@ -50,6 +50,7 @@ export const content = {
   // Anything starting with "[FILLER]" is placeholder copy — replace it.
   work: {
     title: "Work",
+    overview: "5+y designing products | English and German | based in Romania",
     categories: ["SaaS", "Agentic AI", "Product Led Growth (PLG)"],
     items: [
       {
@@ -62,102 +63,50 @@ export const content = {
         problem: [
           "Users were unable to locate the metrics that mattered to them.",
           "No clear separation between static data and actions, competed for attention with no visual hierarchy.",
-          "Power users and casual viewers shared one experience, serving neither well.",
         ],
         approach: [
           "Mapped JTBD and the five most critical metrics across the page.",
           "Designed progressive disclosure patterns to reduce scroll-depth.",
-          "Established a layout system that brings contextual actions in the context to the data they affect.",
+          "Created a modular system to support different user needs and future growth.",
         ],
       },
       {
-        title: "Enterprise Settings Architecture",
-        slug: "enterprise-settings-architecture",
-        category: "SaaS",
-        description:
-          "Restructured a sprawling settings experience with 200+ options into a coherent information architecture.",
-        image: "",
-        problem: [
-          "[FILLER] Two hundred-plus settings were scattered across nine inconsistent pages.",
-          "[FILLER] Admins relied on browser search to find anything; support tickets reflected the chaos.",
-          "[FILLER] Engineering kept adding options to whichever page felt closest, deepening the mess.",
-        ],
-        approach: [
-          "[FILLER] Card-sorted every option with real admins to surface mental models.",
-          "[FILLER] Defined a small set of top-level categories anchored to admin tasks, not internal teams.",
-          "[FILLER] Shipped governance rules so new settings have a clear home from day one.",
-        ],
-      },
-      {
-        title: "AI Assistant Transparency Patterns",
-        slug: "ai-assistant-transparency",
+        title: "Conversational Workflows",
+        slug: "conversational-workflows",
         category: "Agentic AI",
         description:
-          "Designed interaction patterns that build user trust in an AI-powered workflow automation tool.",
-        image: "",
+        "Designed AI-driven workflows where conversational interfaces trigger structured actions.",
+
+        image: "/work/chat_agentic.png",
+
         problem: [
-          "[FILLER] Users disabled the AI features after one wrong suggestion erased their confidence.",
-          "[FILLER] The assistant acted on user data without explaining why or what it changed.",
-          "[FILLER] There was no graceful path from automated action back to manual control.",
+        "AI interactions were treated like isolated chats instead of connected workflows.",
+        "Users could ask questions, but complex multi-step actions lacked visibility, control, and structure.",
         ],
+
         approach: [
-          "[FILLER] Surfaced confidence levels and reasoning summaries directly in the suggestion UI.",
-          "[FILLER] Designed a one-click rollback for every automated action, with a clear audit trail.",
-          "[FILLER] Treated the AI as a teammate that asks before doing anything irreversible.",
+        "Mapped conversational flows as task-oriented systems rather than standalone chat experiences.",
+        "Designed configurable interaction patterns for agent behaviors, approvals, memory, and execution states.",
         ],
       },
       {
-        title: "Conversational Data Explorer",
-        slug: "conversational-data-explorer",
-        category: "Agentic AI",
+        title: "Growth & Activation Redesign",
+        slug: "product-led-growth",
+        category: "Product-Led Growth (PLG)",
         description:
-          "Built a natural language interface for querying complex datasets, making data accessible to non-technical users.",
-        image: "",
+        "From sales-led activation and onboarding toward a product-led approach by reducing friction and enabling self-serve flows.",
+
+        image: "/work/flow_plg.png",
+
         problem: [
-          "[FILLER] Non-technical teams waited days for analysts to answer simple data questions.",
-          "[FILLER] Existing query tools required SQL fluency that most stakeholders lacked.",
-          "[FILLER] Self-serve dashboards never anticipated the right questions in advance.",
+        "User activation depended almost entirely on SDR-led onboarding.",
+        "New users struggled to reach value independently, creating friction between signup and product adoption.",
+        "Growth relied heavily on sales capacity, while onboarding and activation inside the product remained underdeveloped.",
         ],
+
         approach: [
-          "[FILLER] Designed a chat-first interface that translated plain language into validated queries.",
-          "[FILLER] Showed the generated query alongside results so users could learn the data model.",
-          "[FILLER] Built guardrails around expensive queries and surfaced clear error explanations.",
-        ],
-      },
-      {
-        title: "Self-Serve Onboarding Flow",
-        slug: "self-serve-onboarding",
-        category: "Product Led Growth (PLG)",
-        description:
-          "Redesigned onboarding to achieve 60% activation rate within first session, up from 25%.",
-        image: "",
-        problem: [
-          "[FILLER] Three quarters of new sign-ups never reached the product's core value moment.",
-          "[FILLER] The original flow asked for company details before showing any value.",
-          "[FILLER] Drop-off concentrated on a 12-step setup wizard that felt like enterprise software.",
-        ],
-        approach: [
-          "[FILLER] Reordered the flow so users hit a real, useful output within ninety seconds.",
-          "[FILLER] Replaced the wizard with progressive setup tied to actions users actually took.",
-          "[FILLER] Instrumented every step and iterated weekly against a single activation metric.",
-        ],
-      },
-      {
-        title: "Viral Collaboration Features",
-        slug: "viral-collaboration-features",
-        category: "Product Led Growth (PLG)",
-        description:
-          "Designed sharing mechanics that turned users into advocates, driving 35% of new signups.",
-        image: "",
-        problem: [
-          "[FILLER] Power users wanted to invite teammates but the share flow was buried in settings.",
-          "[FILLER] Recipients of shared links landed on a generic marketing page instead of the artifact.",
-          "[FILLER] No part of the product gave users a reason to bring others in.",
-        ],
-        approach: [
-          "[FILLER] Built share-by-default surfaces into the moments users felt proud of their work.",
-          "[FILLER] Designed a recipient-first landing experience that previewed the artifact instantly.",
-          "[FILLER] Layered light gamification — counts, mentions, reactions — to reinforce the loop.",
+        "Mapped the activation journey to identify where users depended on sales intervention to progress.",
+        "Designed self-serve onboarding flows focused on reducing friction and accelerating time-to-value.",
         ],
       },
     ],
