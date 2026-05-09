@@ -35,7 +35,7 @@ export const content = {
   // -- ABOUT ----------------------------------------------------------------
   // The tagline shown at the top of the page.
   about: {
-    title: "5+y designing products | English and German | based in Romania",
+    title: "5+y designing products | EN/DE | based in Romania",
   },
 
   // -- WORK -----------------------------------------------------------------
