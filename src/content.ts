@@ -121,6 +121,7 @@ export const content = {
   // For each question, "correctAnswer" must be exactly "A" or "B" (capitalised).
   play: {
     title: "Design Judgment",
+    description: "Up for a game? These are some common product challenges I care about.",
     questions: [
       {
         question: "Which approach works better for an empty state?",
