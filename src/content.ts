@@ -192,7 +192,7 @@ export const content = {
 
   // -- Footer ---------------------------------------------------------------
   footer: {
-    text: "Designed with intention. Built with love.",
+    text: "Designed with intention. Built with care.",
   },
 } as const
 
