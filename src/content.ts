@@ -35,7 +35,7 @@ export const content = {
   // -- ABOUT ----------------------------------------------------------------
   // The tagline shown at the top of the page.
   about: {
-    title: "5+y designing products | EN/DE | based in Romania",
+    title: "5+y designing products | English and German",
   },
 
   // -- WORK -----------------------------------------------------------------
@@ -114,6 +114,17 @@ export const content = {
         "Designed self-serve onboarding flows focused on reducing friction and accelerating time-to-value.",
         ],
       },
+    ],
+  },
+
+  // -- AI / process --------------------------------------------------------
+  ai: {
+    title: "I work with AI",
+    description: "AI reduces the cost of exploration and the risk of being wrong.",
+    content: [
+      "My design process starts the same way: understand the problem, define the constraints, identify the right direction.",
+      "I define: flows, structure, priorities, product logic.",
+      "AI explores: layouts, patterns, interaction variants.",
     ],
   },
 
