@@ -59,15 +59,16 @@ export const content = {
     categories: ["SaaS", "Agentic AI", "Product-Led Growth (PLG)"],
     items: [
       {
-        title: "Page Redesign",
-        slug: "page-redesign",
+        title: "Platform Redesign",
+        slug: "platform-redesign",
         category: "SaaS",
         description:
-          "Redesigned a complex company page into a more intuitive structure that aims to reduce time-to-insight by 40%.",
+          "Redesigned the structure of a complex platform to reduce time-to-insight by 40%.",
         image: "/work/company_page.png",
         problem: [
           "Users were unable to locate the metrics that mattered to them.",
           "No clear separation between static data and actions, competed for attention with no visual hierarchy.",
+          "An experience organized around user types, rather than the actual tasks users were trying to complete.",
         ],
         approach: [
           "Mapped JTBD and the five most critical metrics across the page.",
