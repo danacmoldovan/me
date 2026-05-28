@@ -63,7 +63,7 @@ export const content = {
         slug: "platform-redesign",
         category: "SaaS",
         description:
-          "Redesigned the structure of a complex platform to reduce time-to-insight by 40%.",
+          "Structural improvements to a complex SaaSplatform to reduce time-to-insight by 40%.",
         image: "/work/company_page.png",
         problem: [
           "Users were unable to locate the metrics that mattered to them.",
