@@ -39,7 +39,7 @@ interface Props {
 
 const { item, index, total, prevSlug, prevTitle, nextSlug, nextTitle } =
   Astro.props
-const galleryImages = Array.from({ length: 3 }, (_, i) => item.images?.[i] ?? "")
+const galleryImages = Array.from({ length: 3 }, (_, i) => (item as any).images?.[i] ?? "")
 const { meta } = content
 const pageTitle = `${item.title} — ${meta.title}`
 ---
