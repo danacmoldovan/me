@@ -64,7 +64,8 @@ export const content = {
         category: "SaaS",
         description:
           "Structural improvements to a complex SaaS platform to reduce time-to-insight by 40%.",
-        image: "/work/company_page.png",
+        image: "/work/pltf_rds_1.png",
+        images: ["/work/pltf_rds_2.png", "/work/pltf_rds_3.png", "/work/pltf_rds_4.png"],
         problem: [
           "Users were unable to locate the metrics that mattered to them.",
           "No clear separation between static data and actions, competed for attention with no visual hierarchy.",
@@ -84,6 +85,7 @@ export const content = {
         "Designed AI-driven workflows where conversational interfaces trigger structured actions.",
 
         image: "/work/chat_agentic.png",
+        images: ["", "", ""],
 
         problem: [
         "AI interactions were treated like isolated chats instead of connected workflows.",
