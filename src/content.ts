@@ -102,18 +102,19 @@ export const content = {
         slug: "mobile-apps",
         category: "Mobile",
         description:
-        "Some mobile apps, mostly designed for fun, but could live in the real world.",
+        "Some mobile apps, mostly designed for fun, but equiped with real-world functionality.",
 
         image: "/work/mobile_1.png",
         images: ["/work/mobile_2.png", "/work/mobile_3.png", "/work/mobile_4.png"],
 
         problem: [
+        "Company intelligence, subscription tracking, or travel planning each required fundamentally different user journeys.",
         "Allow quick access to the information and actions that matter most in the moment.",
         "Mobile constraints made prioritization and information hierarchy critical for successful task completion.",
         ],
 
         approach: [
-        "Mapped the primary jobs-to-be-done for each product to identify the shortest path to value.",
+        "Mapped the primary jobs to be done for each product to identify the shortest path to value.",
         "Designed mobile-first experiences focused on clarity, speed, and reducing cognitive load.",
         "Established reusable patterns while tailoring interactions to the specific context of each application.",
         ],
