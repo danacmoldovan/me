@@ -56,7 +56,7 @@ export const content = {
   // Anything starting with "[FILLER]" is placeholder copy — replace it.
   work: {
     title: "Work",
-    categories: ["SaaS", "Agentic AI", "Product-Led Growth (PLG)"],
+    categories: ["SaaS", "Agentic AI", "Mobile", "Product-Led Growth (PLG)"],
     items: [
       {
         title: "Platform Redesign",
@@ -95,6 +95,27 @@ export const content = {
         approach: [
         "Mapped conversational flows as task-oriented systems rather than standalone chat experiences.",
         "Designed configurable interaction patterns for agent behaviors, approvals, memory, and execution states.",
+        ],
+      },
+      {
+        title: "Mobile Apps",
+        slug: "mobile-apps",
+        category: "Mobile",
+        description:
+        "Some mobile apps, mostly designed for fun, but could live in the real world.",
+
+        image: "/work/mobile_1.png",
+        images: ["/work/mobile_2.png", "/work/mobile_3.png", "/work/mobile_4.png"],
+
+        problem: [
+        "Allow quick access to the information and actions that matter most in the moment.",
+        "Mobile constraints made prioritization and information hierarchy critical for successful task completion.",
+        ],
+
+        approach: [
+        "Mapped the primary jobs-to-be-done for each product to identify the shortest path to value.",
+        "Designed mobile-first experiences focused on clarity, speed, and reducing cognitive load.",
+        "Established reusable patterns while tailoring interactions to the specific context of each application.",
         ],
       },
       {
