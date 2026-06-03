@@ -84,8 +84,8 @@ export const content = {
         description:
         "Designed AI-driven workflows where conversational interfaces trigger structured actions.",
 
-        image: "/work/chat_agentic.png",
-        images: ["", "", ""],
+        image: "/work/cnv_agts_1.png",
+        images: ["/work/cnv_agts_2.png", "/work/cnv_agts_3.png", "/work/cnv_agts_4.png"],
 
         problem: [
         "AI interactions were treated like isolated chats instead of connected workflows.",
