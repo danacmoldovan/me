@@ -126,7 +126,7 @@ export const content = {
         description:
         "From sales-led activation and onboarding toward a product-led approach by reducing friction and enabling self-serve flows.",
 
-        image: "/work/flow_plg.png",
+        image: "/work/plg_1.png",
 
         problem: [
         "User activation depended almost entirely on SDR-led onboarding.",
