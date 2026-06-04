@@ -78,6 +78,26 @@ export const content = {
         ],
       },
       {
+        title: "Operational Insights",
+        slug: "operational-insights",
+        category: "SaaS",
+        description:
+          "Monitoring and managing high-impact operational actions in a data-heavy environment.",
+        image: "/work/op_ins_1.png",
+        images: ["/work/op_ins_2.png", "/work/op_ins_3.jpg", "/work/op_ins_4.png"],
+        problem: [
+          "Users needed to make operational decisions based on fragmented information spread across multiple interfaces and system states.",
+          "Large volumes of operational data required flexible filtering, drill-down capabilities and progressive disclosure to avoid overwhelming users.",
+          "Potentially destructive actions required users to understand dependencies, exceptions and consequences before proceeding.",
+        ],
+
+        approach: [
+          "Designed workflows that brought relevant information closer to the decision point through contextual panels and connected views.",
+          "Reduced cognitive load through progressive disclosure, filtering mechanisms and task-oriented information architecture.",
+          "Created clear risk communication patterns that balanced transparency, confidence and actionability for complex system operations.",
+        ],
+      },
+      {
         title: "Conversational Workflows",
         slug: "conversational-workflows",
         category: "Agentic AI",
